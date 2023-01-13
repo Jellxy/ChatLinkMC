@@ -1,7 +1,7 @@
 import subprocess, os
 from time import sleep
 from datetime import datetime
-servers = ['mc-mountaintop', 'mc-creativetop', 'mc-gregtech']
+servers = []
 banned_chars = ['sudo', '>', '<', "'", '{', '}', '[', ']', '=', '-', '(', ')', '.', ',', '/', 'left', 'right', 'up', 'down']
 def get_log(server, lines = 5):
 	log = subprocess.check_output(['tmux','capture-pane','-S',str(28 - lines),'-p','-t',server]).decode('utf-8').split('\n')
